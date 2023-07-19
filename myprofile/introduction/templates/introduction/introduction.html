@@ -1,76 +1,95 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>My Profile - Introduction</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      margin: 0;
-      padding: 0;
-    }
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+  </head>
+  <body>
+    <div class="grid grid-cols-10">
+      <div class="col-span-1 bg-black h-screen text-white">
+        <div class="grid justify-items-center h-36">
+          <div class="m-6">
+            <img src="http://themezaa.com/html/resume/default/images/logo.png" width="140" height="140" alt="" />
+          </div>
+        </div>
+        <div>
+          <ul class="justify-items-start">
+            <div class="pl-7 p-10">
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">HOME</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">ABOUT</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">SKILLS</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">EXPERIENCE</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">EDUCATION</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">PORTFOLIO</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">CONTACT</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">BLOG</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-4 text-sm grid-cols-5">
+                <a class="text"><i class="fa fa-whatsapp fa-lg"></i></a>
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+                <a class="text" href="#"><i class="fa fa-envelope-o fa-lg hover:text-white" aria-hidden="true"></i></a>
+              </li>
+            </div>
 
-    h1 {
-      color: #333;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+            <!-- ... -->
+          </ul>
+        </div>
+      </div>
 
-    p {
-      color: #666;
-      font-size: 18px;
-      line-height: 1.5;
-      margin-bottom: 30px;
-    }
+      <div class="col-span-5 relative flex">
+        <img src="http://themezaa.com/html/resume/default/images/profile.jpg" alt="Profile Image" class="profile-image" />
+        <div class="absolute bottom-64 left-16 h-64 w-64 text-5xl break-normal text-white border-b-2 border-neutral-100" style="font-family: 'Oswald, sans-serif;'">Hello, I'M AMOL YADAV</div>
+        <div class="absolute bottom-64 left-16 h-24 w-54 pt-8 text-2xl text-white border-t-2" style="font-family: 'Oswald, sans-serif;'">Full Stack Developer</div>
+      </div>
 
-    .highlight {
-      color: #ff8c00;
-      font-weight: bold;
-    }
+      <div class="grid col-span-4 gap-0">
+        <div class="mb-0 mt-5">
+          <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">ABOUT</h1>
+          <div class="w-24 h-2 ml-2 mt-3 mb-8 bg-yellow-500"></div>
 
-    .profile-image {
-      border-radius: 50%;
-      margin-bottom: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <img src="/home/smartiam/Desktop/images.jpeg" alt="Profile Image"  class="profile-image">
-    <h1>Welcome to My Profile</h1>
-    <p>
-      Hello, I'm [Your Name], a passionate [Your Profession] with [number] years of experience.
-      I specialize in [Your Areas of Expertise]. I believe in creating innovative solutions and
-      delivering exceptional results. My goal is to [Your Goal or Mission Statement].
-    </p>
-    <p>
-      Throughout my career, I have worked with a diverse range of clients, including [Client Types].
-      I have successfully completed projects that involve [Specific Achievements]. My attention to detail,
-      problem-solving skills, and strong communication abilities have been key factors in my success.
-    </p>
-    <p>
-      I am constantly expanding my knowledge and staying up-to-date with the latest industry trends and
-      technologies. I thrive in collaborative environments and enjoy working with cross-functional teams
-      to tackle complex challenges. I am always seeking new opportunities to grow and make a positive impact.
-    </p>
-    <p class="highlight">
-      If you are looking for a dedicated professional who can [Summarize Your Value Proposition], please
-      don't hesitate to get in touch. I would be thrilled to discuss how I can contribute to your projects
-      and help you achieve your goals.
-    </p>
-    <p>
-      Thank you for visiting my profile, and I look forward to connecting with you!
-    </p>
-  </div>
-</body>
+          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Name: Amol Yadav</a>
+          </li>
+          <li class="grid justify-items-start list-none hover:text-amber-500 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Email : amol.d.4149@gmail.com</a>
+          </li>
+          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Phone : 9130900878</a>
+          </li>
+          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Date of birth : 18 December 2001</a>
+          </li>
+          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Address : Pune, Maharashtra, India</a>
+          </li>
+          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Nationality : India</a>
+          </li>
+          <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">PROFFETIONAL PROFILE</h1>
+          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
