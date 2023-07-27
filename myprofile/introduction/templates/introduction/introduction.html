@@ -5,6 +5,8 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <script src="https://cdn.tailwindcss.com"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     </head>
   </head>
@@ -44,10 +46,9 @@
                 <a href="#">BLOG</a>
               </li>
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-4 text-sm grid-cols-5">
-                <a class="m-2" ><i class="fa fa-whatsapp fa-lg"></i></a>
-             
-                <a class="m-2" href="#"><i class="fa fa-envelope-o fa-lg hover:text-white" aria-hidden="true"></i></a>
+                <a class="m-2"><i class="fa fa-whatsapp fa-lg"></i></a>
 
+                <a class="m-2" href="#"><i class="fa fa-envelope-o fa-lg hover:text-white" aria-hidden="true"></i></a>
               </li>
             </div>
 
@@ -86,59 +87,115 @@
             <a href="#">Nationality : Indian</a>
           </li>
           <h1 class="text-lg mt-7 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">PROFFETIONAL PROFILE</h1>
-          <li class="grid justify-items-start list-none  border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">
-              Experienced Full Stack developer with 2 year of expertise in web application development, 
-              structurized backend design, and integration            
-            </a>
+          <li class="grid justify-items-start list-none border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+            <a href="#">Experienced Full Stack developer with 2 year of expertise in web application development, structurized backend design, and integration</a>
           </li>
-          <button class="border-2 mt-6 mb-6 border-red-500 hover:bg-red-500 p-2 w-64">
-            Download Your Resume <i class="fa-solid fa-download"></i>
-          </button>
+          <button class="border-2 mt-6 mb-6 border-amber-400 hover:bg-amber-400 hover:text-white p-2 w-92">DOWNLOAD RESUME AS PDF FORMAT <i class="fa-solid fa-download"></i></button>
           <img src="http://themezaa.com/html/resume/default/images/signature.jpg" alt="Profile Image" class="profile-image" />
-
         </div>
-        
       </div>
 
       <div class="grid col-span-4 gap-0">
         <div class="mb-0 mt-5">
           <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">SKILLS</h1>
           <div class="w-24 h-2 ml-2 mt-3 mb-8 bg-yellow-500"></div>
+          <p class="text-sm mt-5 mb-0 font-bold border-b-indigo-500">JUST MY OWESOME SKILLS</p>
+          <p class="text-sm mt-5 mb-0">This highlights the expertise of the IT professional as a Full Stack developer with a focus on web application development, structured backend design, and integration. With 2 years of experience, the individual has demonstrated proficiency in these areas and has the necessary skills to contribute effectively to software development projects. The combination of technical skills and domain knowledge makes the professional a valuable asset to the team. Furthermore, their expertise in web application development and backend design ensures the ability to create robust and scalable applications, meeting the requirements of modern software development. The integration skills enable seamless communication between different components and systems, ensuring a cohesive and efficient application ecosystem. Overall, the IT professional's skill set and experience make them a competent developer capable of tackling complex challenges and delivering high-quality software solutions.</p>
+          <canvas id="lineChart" class="mt-10 mb-0" width="800" height="400"></canvas>
 
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Name: Amol Yadav</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-500 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Email : amol.d.4149@gmail.com</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Phone : 9130900878</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Date of birth : 18 December 2001</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Address : Pune, Maharashtra, India</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Nationality : Indian</a>
-          </li>
-          <h1 class="text-lg mt-7 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">PROFFETIONAL PROFILE</h1>
-          <li class="grid justify-items-start list-none  border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">
-              Experienced Full Stack developer with 2 year of expertise in web application development, 
-              structurized backend design, and integration            
-            </a>
-          </li>
-          <button class="border-2 mt-6 mb-6 border-red-500 hover:bg-red-500 p-2 w-64">
-            Download Your Resume <i class="fa-solid fa-download"></i>
-          </button>
+          <p class="text-sm mt-5 mb-0 font-bold border-b-indigo-500">LANGUAGE SKILLS</p>
+          <p class="text-sm mt-5 mb-0">This highlights the expertise of the IT professional as a Full Stack developer with a focus on web application development, structured backend design, and integration. With 2 years of experience, the individual has demonstrated proficiency in these areas and has the necessary skills to contribute effectively to software development projects. The combination of technical skills and domain knowledge makes the professional a valuable asset to the team. Furthermore, their expertise in web application development and backend design ensures the ability to create robust and scalable applications, meeting the requirements of modern software development. The integration skills enable seamless communication between different components and systems, ensuring a cohesive and efficient application ecosystem. Overall, the IT professional's skill set and experience make them a competent developer capable of tackling complex challenges and delivering high-quality software solutions.</p>
+
+          <button class="border-2 mt-6 mb-6 border-red-500 hover:bg-red-500 p-2 w-64">Download Your Resume <i class="fa-solid fa-download"></i></button>
           <img src="http://themezaa.com/html/resume/default/images/signature.jpg" alt="Profile Image" class="profile-image" />
-
         </div>
-        
       </div>
     </div>
+    <script>
+      // Data for the multiline graph
+      const data = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: 'Website Development',
+            borderColor: 'red',
+            backgroundColor: 'rgba(255, 0, 0, 0.1)',
+            data: [0, 50, 60, 70, 80]
+          },
+          {
+            label: 'Backend Development',
+            borderColor: 'blue',
+            backgroundColor: 'rgba(0, 0, 255, 0.1)',
+            data: [0, 70, 80, 90, 95]
+          },
+          {
+            label: 'Embedded',
+            borderColor: 'green',
+            backgroundColor: 'rgba(0, 128, 0, 0.1)',
+            data: [0, 10, 20, 30, 40, 50]
+          },
+          {
+            label: 'Technical Expertise',
+            borderColor: 'orange',
+            backgroundColor: 'rgba(255, 165, 0, 0.1)',
+            data: [0, 10, 20, 80, 90, 95]
+          }
+        ]
+      }
+      
+      // Chart configuration
+      const config = {
+        type: 'line',
+        data: data,
+        options: {
+          animation: {
+            duration: 1000,
+            easing: 'easeInOutQuart'
+          },
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Months',
+                color: 'black',
+                font: {
+                  size: 16,
+                  weight: 'bold'
+                }
+              }
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Experience Level',
+                color: 'black',
+                font: {
+                  size: 16,
+                  weight: 'bold'
+                }
+              },
+              suggestedMin: 0,
+              suggestedMax: 100
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              labels: {
+                font: {
+                  size: 14
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      // Create the chart
+      const ctx = document.getElementById('lineChart').getContext('2d')
+      const lineChart = new Chart(ctx, config)
+    </script>
   </body>
 </html>

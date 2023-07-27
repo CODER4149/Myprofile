@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fancy Multiline Graph</title>
+    <style>
+      canvas {
+        border: 1px solid #ccc;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="lineChart" width="800" height="400"></canvas>
+
+    <script>
+      // Data for the multiline graph
+      const data = {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+        datasets: [
+          {
+            label: 'Website Development',
+            borderColor: 'red',
+            backgroundColor: 'rgba(255, 0, 0, 0.1)',
+            data: [20, 30, 40, 50, 60, 70, 80]
+          },
+          {
+            label: 'Backend Development',
+            borderColor: 'blue',
+            backgroundColor: 'rgba(0, 0, 255, 0.1)',
+            data: [40, 50, 30, 70, 80, 60, 90]
+          },
+          {
+            label: 'Embedded',
+            borderColor: 'green',
+            backgroundColor: 'rgba(0, 128, 0, 0.1)',
+            data: [60, 70, 80, 60, 90, 70, 100]
+          },
+          {
+            label: 'Technical Expertise',
+            borderColor: 'orange',
+            backgroundColor: 'rgba(255, 165, 0, 0.1)',
+            data: [10, 20, 30, 40, 50, 40, 30]
+          }
+        ]
+      }
+      
+      // Chart configuration
+      const config = {
+        type: 'line',
+        data: data,
+        options: {
+          animation: {
+            duration: 1000,
+            easing: 'easeInOutQuart'
+          },
+          scales: {
+            x: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Months',
+                color: 'black',
+                font: {
+                  size: 16,
+                  weight: 'bold'
+                }
+              }
+            },
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: 'Experience Level',
+                color: 'black',
+                font: {
+                  size: 16,
+                  weight: 'bold'
+                }
+              },
+              suggestedMin: 0,
+              suggestedMax: 100
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              labels: {
+                font: {
+                  size: 14
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      // Create the chart
+      const ctx = document.getElementById('lineChart').getContext('2d')
+      const lineChart = new Chart(ctx, config)
+    </script>
+  </body>
+</html>
