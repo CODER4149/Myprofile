@@ -14,32 +14,31 @@
       <p class="text-xl mt-5 mb-0 ">
         With 2 year of experience as a Full Stack Developer, I possess extensive knowledge in web application development, structurized backend design, and seamless integration. Proficient in Angular, Java, Spring Boot, PHP, JavaScript, jQuery, and Ajax, I have expertise in designing APIs, building websites, and working on TCP/IP socket and serial reader communication. I am skilled in database management using MySQL, Postgres, and SQLite. My proficiency in tools like Redis, Grafana, Metabase, and Figma enhances my ability to deliver efficient projects. Complemented by a B.C.A. education, I am passionate about creating user-friendly and scalable web applications, bringing valuable problem-solving skills and attention to detail to any team.
       </p>
+     
 
+      {% for items in related_items %}
       <div class="grid grid-cols-4 gap-4 border-t-2 border-b-2 mt-10 p-5">
         <div class="grid col-span-1 pt-5" >
-            {% comment %} <img src="
-
-            " alt="Profile Image" class="profile-image" /> {% endcomment %}
-            {% comment %} <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            
+            <div class="w-8 align-items-center">
+              <img src="{{items.iamage.url}}" class="rounded-t-xl">
+              {% comment %} <svg class="bg-yellow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg> {% endcomment %}
-            <div class="w-8 align-items-center">
-              <svg class="bg-yellow" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-              </svg>
             </div>
             
             
         </div>
         <div class="grid col-span-1">
-            <h1 class="text-md  mb-0 font-bold border-b-indigo-500 break-normal hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'">Amol Yadav</h1>
-            <h1 class="text-sm mt-2 mb-0 font-bold border-b-indigo-500 break-normal hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'">Pune, Maharashtra , India</h1>
+            {% comment %} <h1 class="text-md  mb-0 font-bold border-b-indigo-500 break-normal hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'">Amol Yadav</h1>
+            <h1 class="text-sm mt-2 mb-0 font-bold border-b-indigo-500 break-normal hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'">Pune, Maharashtra , India</h1> {% endcomment %}
+            <h1 class="text-md  mb-0 font-bold border-b-indigo-500 break-normal hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'"></h1>
+            <h1 class="text-sm mt-2 mb-0 font-bold border-b-indigo-500 break-normal hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'">{{items.address}}</h1>
 
         </div>
         <div class="grid col-span-2" >
-            <h1 class="text-sm mt-2 mb-0 font-bold border-b-indigo-500 break-all hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'"> I'M ALSO ON SOCIAL NETWORKS    </h1>
+            <h1 class="text-sm mt-2 mb-0 font-bold border-b-indigo-500 break-all hover:text-amber-300" style="font-family: 'Roboto, sans-serif;'"> {{items.description}}  </h1>
 
            <p>
             You can follw me on linkedin 
@@ -49,7 +48,7 @@
            </a>
         </div>
       </div>
-
+      {% endfor  %}
 
 
       <div class="grid grid-cols-4 gap-4 border-t-2 border-b-2 mt-10 p-5">
@@ -97,7 +96,7 @@
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
               </svg> {% endcomment %}
             <div class="w-2 align-items-left">
-                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="50" viewBox="0 0 256 193"><path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455h40.727Z"/><path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798v98.91Z"/><path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945l-16.292 12.218Z"/><path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23v23.273Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 256 193"><path fill="#4285F4" d="M58.182 192.05V93.14L27.507 65.077L0 49.504v125.091c0 9.658 7.825 17.455 17.455 17.455h40.727Z"/><path fill="#34A853" d="M197.818 192.05h40.727c9.659 0 17.455-7.826 17.455-17.455V49.505l-31.156 17.837l-27.026 25.798v98.91Z"/><path fill="#EA4335" d="m58.182 93.14l-4.174-38.647l4.174-36.989L128 69.868l69.818-52.364l4.669 34.992l-4.669 40.644L128 145.504z"/><path fill="#FBBC04" d="M197.818 17.504V93.14L256 49.504V26.231c0-21.585-24.64-33.89-41.89-20.945l-16.292 12.218Z"/><path fill="#C5221F" d="m0 49.504l26.759 20.07L58.182 93.14V17.504L41.89 5.286C24.61-7.66 0 4.646 0 26.23v23.273Z"/></svg>
 
             </div>
             
@@ -119,16 +118,176 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"> <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/> </svg>
             </a>
         </div>
+        
       </div>
+    </div>
+</div>
+
+<div class="grid col-span-4  gap-4 border-t-2 border-b-2 p-5">
+
+  {% comment %} <form action="{% url 'contact' %}"  id="formdata" method="POST" role="form" class="contactForm">
+    {% csrf_token %}
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          Name
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input class=" appearance-none  border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name"  type="text" name="name" id="name" placeholder="Your Full Name" required >
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+            Email
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input class=" appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="email" class="form-control" name="email" id="email"  placeholder="Your Email" required >
+      </div>
+    </div>
+    <div class="md:flex md:items-center mb-6">
+      <div class="md:w-1/3">
+        <label class="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
+          Message
+        </label>
+      </div>
+      <div class="md:w-2/3">
+        <input class=" appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required >
+      </div>
+    </div>
+              {% comment %} <input type="text" name="name" id="name" class="w-500 hover:text-amber-300"  placeholder="Your Name"  required> <br><br><br>
+            
+              <input type="email" class="form-control" name="email" id="email"  placeholder="Your Email"  required>
+              <br><br><br>
+          
+          
+       
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"  required> <br><br> {% endcomment %}
+            {% comment %} <div class="md:flex md:items-center">
+              <div class="md:w-1/3"></div>
+              <div class="md:w-2/3">
+         <button type="submit" id="conctactsub" class="shadow bg-amber-700 hover:bg-amber-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" value="contact us" >contact us</button>
+        </div>
+      </div> {% endcomment %}
+
+  {% comment %} </form>  {% endcomment %}
+  <div class="flex">
+    <div class="w-full max-w-md mx-auto">
+      <div class="bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+        <form action="{% url 'contact' %}" method="POST" role="form">
+          {% csrf_token %}
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+            <input class="mt-1 p-2 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" id="name" name="name" type="text" placeholder="Your Full Name" required>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+            <input class="mt-1 p-2 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" id="email" name="email" type="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="subject">Message</label>
+            <input class="mt-1 p-2 border rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-500" id="subject" name="subject" type="text" placeholder="Subject" required>
+          </div>
+          <div class="flex items-center justify-between">
+            <button type="submit" id="contactsub" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Contact Us</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
+  {% comment %} <div class="w-full max-w-md mx-auto">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+          Name:
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" required>
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email:
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" required>
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+          Message:
+        </label>
+        <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" rows="4" required></textarea>
+      </div>
+  
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="resume_file">
+          Upload Resume (PDF):
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="resume_file" name="resume_file" type="file" accept=".pdf" required>
+      </div>
+  
+      <div class="flex items-center justify-between">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div> {% endcomment %}
+  
+</div> 
+    
+   
+{%if status_code == 200  %}
+<div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="false">
+  <!-- Background backdrop -->
+  <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+
+  <div class="fixed inset-0 z-10 overflow-y-auto">
+    <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+      <div class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+        <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+          <div class="sm:flex sm:items-start">
+            <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-green-100 sm:mx-0 sm:h-10 sm:w-10">
+              <svg class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+              <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title">{{message}}!</h3>
+              <div class="mt-2">
+                {% comment %} <p class="text-sm text-gray-500">{{message}}</p> {% endcomment %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md bg-green-500 px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-green-600 sm:mt-0 sm:w-auto" onclick="contact_page()">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+   
+{%endif %}
 
 
 
 
 
   <script>
-
+    
     function skill_page(){
       window.location.href = "../skills";
+    }
+    function contact_page(){
+      window.location.href = "../contact";
     }
   </script>
 
