@@ -3,36 +3,22 @@
 
 
 
-
 {% block content %}
 
 <div class="grid col-span-4 gap-0" onclick="home_page()">
     <div class="mb-0 mt-5">
       <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">ABOUT</h1>
       <div class="w-24 h-2 ml-2 mt-3 mb-8 bg-yellow-500"></div>
-
+      {% for i in about %}
       <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="#">Name: Amol Yadav</a>
+        <a href="#">{{i.name}} : {{ i.value}}</a>
       </li>
-      <li class="grid justify-items-start list-none hover:text-amber-500 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Email : amol.d.4149@gmail.com</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="#">Phone : 9130900878</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="#">Date of birth : 18 December 2001</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="#">Address : Pune, Maharashtra, India</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="#">Nationality : Indian</a>
-      </li>
+      {%endfor%}
+     
       <h1 class="text-lg mt-7 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">PROFFETIONAL PROFILE</h1>
       <li class="grid justify-items-start list-none  border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
         <a href="#">
-          Experienced Full Stack developer with 2 year of expertise in web application development, 
+          Experienced Full Stack developer with{{  time_difference }} Months of expertise in web application development, 
           structurized backend design, and integration            
         </a>
       </li>
@@ -53,7 +39,8 @@
       <h1 class="text-lg mt-7 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">PROFFETIONAL PROFILE</h1>
       <li class="grid justify-items-start list-none  border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
         <a href="#">
-          Experienced Full Stack developer with 2 year of expertise in web application development, 
+          Experienced Full Stack developer with {{datetime.now()-datetime(2021, 6, 26)
+}} year of expertise in web application development, 
           structurized backend design, and integration            
         </a>
       </li>

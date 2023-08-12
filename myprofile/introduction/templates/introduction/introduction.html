@@ -1,69 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    </head>
-  </head>
-  <body>
-    
-    <div class="grid grid-cols-10">
-      <div class="col-span-1 bg-black h-screen  text-white">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+<div class="grid grid-cols-10">
+    <div class="col-span-1 bg-black h-full text-white md:col-span-2 md:flex md:flex-col">
         <div class="grid justify-items-center h-36">
-          <div class="m-6">
-            <img src="{{logo.url}}" width="140" height="140" alt="{{logo.url}}" />
-            
-          </div>
-        </div>
-        <div>
-          <ul class="justify-items-start">
-            <div class="pl-7 p-10">
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="../">HOME</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="">ABOUT</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="../skills">SKILLS </a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="../experience">EXPERIENCE</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="../experience">EDUCATION</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">PORTFOLIO</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="../contact">CONTACT</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">BLOG</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-4 text-sm grid-cols-5">
-                <a class="m-2" ><i class="fa fa-whatsapp fa-lg"></i></a>
-             
-                <a class="m-2" href="#"><i class="fa fa-envelope-o fa-lg hover:text-white" aria-hidden="true"></i></a>
-
-              </li>
+            <div class="m-6">
+                <img src="{{logo.url}}" width="140" height="140" alt="{{logo.url}}" />
             </div>
-
-            <!-- ... -->
-          </ul>
         </div>
-      </div>
-{% block content %}
-{% endblock %}
-    
-
-       
-
-      </div>
+        <div class="md:flex md:flex-col md:justify-start">
+            <ul class="md:pl-7 p-10">
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                    <a href="../">HOME</a>
+                </li>
+                {% comment %} <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="">ABOUT</a>
+                </li> {% endcomment %}
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="../skills">SKILLS </a>
+                </li>
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="../experience">EXPERIENCE</a>
+                </li>
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="../experience">EDUCATION</a>
+                </li>
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="#">PORTFOLIO</a>
+                </li>
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="../contact">CONTACT</a>
+                </li>
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                  <a href="#">BLOG</a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </body>
+
+    <div class="md:col-span-8 md:pl-8 md:pr-4 col-span-10">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+
+</body>
 </html>

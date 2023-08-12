@@ -3,8 +3,8 @@
 {% block content %}
   <div class="col-span-5 relative flex">
     <img src="{{ profile_image.url }}" alt="Profile Image" class="profile-image" />
-    <div class="absolute bottom-64 left-16 h-64 w-64 text-5xl break-normal text-white border-b-2 border-neutral-100" style="font-family: 'Oswald, sans-serif;'">Hello, I'M AMOL YADAV</div>
-    <div class="absolute bottom-64 left-16 h-24 w-54 pt-8 text-2xl text-white border-t-2" style="font-family: 'Oswald, sans-serif;'">Full Stack Developer</div>
+    <div class="absolute bottom-64 left-16 h-64 w-64 text-5xl break-normal text-white border-b-2 border-neutral-100" style="font-family: 'Oswald, sans-serif;'">Hello, I'M {{profile.name}}</div>
+    <div class="absolute bottom-64 left-16 h-24 w-54 pt-8 text-2xl text-white border-t-2" style="font-family: 'Oswald, sans-serif;'">{{profile.designation}}</div>
   </div>
 
   <div class="grid col-span-4 gap-0">
@@ -12,27 +12,14 @@
       <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">ABOUT</h1>
       <div class="w-24 h-2 ml-2 mt-3 mb-8 bg-yellow-500"></div>
 
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm" onclick="skill_page()">
-        <a href="#">Name: Amol Yadav</a>
+      {% for i in about %}
+      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+        <a href="#">{{i.name}} : {{ i.value}}</a>
       </li>
-      <li class="grid justify-items-start list-none hover:text-amber-500 border-b-2 border-neutral-100 pb-3 pt-3 text-sm" onclick="skill_page()">
-        <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Email : amol.d.4149@gmail.com</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm" onclick="skill_page()">
-        <a href="#">Phone : 9130900878</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm" onclick="skill_page()">
-        <a href="#">Date of birth : 18 December 2001</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm" onclick="skill_page()">
-        <a href="#">Address : Pune, Maharashtra, India</a>
-      </li>
-      <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm" onclick="skill_page()">
-        <a href="#">Nationality : Indian</a>
-      </li>
+      {%endfor%}
       <h1 class="text-lg mt-7 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'" onclick="skill_page()">PROFFETIONAL PROFILE</h1>
       <li class="grid justify-items-start list-none border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-        <a href="#" onclick="skill_page()">Experienced Full Stack developer with 2 year of expertise in web application development, structurized backend design, and integration</a>
+        <a href="#" onclick="skill_page()">Experienced Full Stack developer with {{  time_difference }} Months of expertise in web application development, structurized backend design, and integration</a>
       </li>
       <button class="border-2 mt-8 mb-6 border-red-500 hover:bg-red-500 p-2 w-64" onclick="download_resume()" target="_blank">Download Your Resume <i class="fa-solid fa-download"></i></button>
       <img src="http://themezaa.com/html/resume/default/images/signature.jpg" alt="Profile Image" class="profile-image" />
