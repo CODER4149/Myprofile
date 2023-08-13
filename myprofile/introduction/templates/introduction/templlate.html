@@ -28,10 +28,25 @@
 
   <script>
     function skill_page() {
-      window.location.href = './skills'
+     // window.location.href = './skills'
+
     }
     function download_resume() {
-      window.location.href = '/download/{{ id }}'
+      //window.location.href = '/download/{{ id }}'
     }
+  </script>
+  <script>
+    const toggleButton = document.getElementById('dropdown-toggle');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+  
+    toggleButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+  
+    window.addEventListener('click', (event) => {
+        if (!toggleButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
   </script>
 {% endblock %}

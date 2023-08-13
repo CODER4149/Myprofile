@@ -1,0 +1,35 @@
+{
+    "version":2,
+    "builds":[
+        {
+        "src":"myprofile/wsgi.py",
+        "use":"@vercel/python",
+        "config":{
+            "maxLamdaSize":"15mb",
+            "runtime":"python3.9"
+
+        }
+        },
+        {
+        "src":"build_file.sh",
+        "use":"@vercel/static-build",
+        "config":{
+            "distDir":"staticfiles_build",
+            "runtime":"python3.9"
+
+        }
+        }
+        
+
+    ],
+    "routes":[
+        {
+            "src":"/static/{.*}",
+            "dist":"/static/$1"
+        },
+        {
+            "src":"/{.*}",
+            "dist":"myprofile/wsgi.py"
+        }
+    ]
+}

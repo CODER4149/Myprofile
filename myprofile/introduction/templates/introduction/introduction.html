@@ -9,7 +9,7 @@
 <body>
 
 <div class="grid grid-cols-10">
-    <div class="col-span-1 bg-black h-full text-white md:col-span-2 md:flex md:flex-col">
+    <div class="col-span-1 bg-black h-full text-white md:col-span-2 md:flex md:flex-col hidden">
         <div class="grid justify-items-center h-36">
             <div class="m-6">
                 <img src="{{logo.url}}" width="140" height="140" alt="{{logo.url}}" />
@@ -21,29 +21,87 @@
                     <a href="../">HOME</a>
                 </li>
                 {% comment %} <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="">ABOUT</a>
+                <a href="">ABOUT</a>
                 </li> {% endcomment %}
-                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="../skills">SKILLS </a>
-                </li>
-                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="../experience">EXPERIENCE</a>
-                </li>
-                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="../experience">EDUCATION</a>
-                </li>
-                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="#">PORTFOLIO</a>
-                </li>
-                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="../contact">CONTACT</a>
-                </li>
-                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                  <a href="#">BLOG</a>
-                </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="../skills">SKILLS </a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="../experience">EXPERIENCE</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="../experience">EDUCATION</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">PORTFOLIO</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="../contact">CONTACT</a>
+              </li>
+              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="#">BLOG</a>
+              </li>
             </ul>
         </div>
     </div>
+    
+<style>
+  @media (max-width: 768px) {
+      .hidden.md\\:hidden {
+          display: block !important;
+      }
+      .md\\:hidden {
+          display: none !important;
+      }
+  }
+  </style>
+  
+  <div class="md:hidden bg-black h-24 text-white col-span-10 md:col-span-2 md:flex md:flex-col md:justify-start md:items-center md:w-1/6 p-4 flex gap-4">
+    <img src="{{logo.url}}" width="50" height="50" alt="{{logo.url}}" />
+    <div class="flex-grow"></div>
+    <select id="cars" class="ml-auto bg-white border border-gray-300 text-gray-700 px-3 w-10 h-2 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+      <option value="" disabled selected>Select an option</option>
+    <option value="../">HOME</option>
+    <option value="../skills">SKILLS</option>
+    <option value="../experience">EXPERIENCE</option>
+    <option value="../contact">EXPERIENCE</option>
+
+  </select>
+  <script>
+    const selectElement = document.getElementById('cars');
+    selectElement.addEventListener('change', function() {
+        const selectedValue = selectElement.value;
+        if (selectedValue) {
+            window.location.href = selectedValue;
+        }
+    });
+</script>
+
+
+  {% comment %} <ul class="md:flex md:flex-col md:space-y-4 mt-4">
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../">HOME</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="#">ABOUT</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../skills">SKILLS</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../experience">EXPERIENCE</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="#">PORTFOLIO</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../contact">CONTACT</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="#">BLOG</a>
+        </li>
+    </ul>  {% endcomment %}
+  </div>
 
     <div class="md:col-span-8 md:pl-8 md:pr-4 col-span-10">
         {% block content %}

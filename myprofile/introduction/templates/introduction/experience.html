@@ -144,14 +144,27 @@ data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJC
   <script>
 
     function skill_page(){
-      window.location.href = "../skills";
+      //window.location.href = "../skills";
     }
     function contcat(){
-        window.location.href = "../contact";
+     //   window.location.href = "../contact";
       }
     
   </script>
 
-
+  <script>
+    const toggleButton = document.getElementById('dropdown-toggle');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+  
+    toggleButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+  
+    window.addEventListener('click', (event) => {
+        if (!toggleButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+  </script>
 
   {% endblock %}
