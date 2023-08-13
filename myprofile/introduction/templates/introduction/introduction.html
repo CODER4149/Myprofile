@@ -1,95 +1,113 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    </head>
-  </head>
-  <body>
-    <div class="grid grid-cols-10">
-      <div class="col-span-1 bg-black h-screen text-white">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+<div class="grid grid-cols-10">
+    <div class="col-span-1 bg-black h-full text-white md:col-span-2 md:flex md:flex-col hidden">
         <div class="grid justify-items-center h-36">
-          <div class="m-6">
-            <img src="http://themezaa.com/html/resume/default/images/logo.png" width="140" height="140" alt="" />
-          </div>
+            <div class="m-6">
+                <img src="{{logo.url}}" width="140" height="140" alt="{{logo.url}}" />
+            </div>
         </div>
-        <div>
-          <ul class="justify-items-start">
-            <div class="pl-7 p-10">
+        <div class="md:flex md:flex-col md:justify-start">
+            <ul class="md:pl-7 p-10">
+                <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                    <a href="../">HOME</a>
+                </li>
+                {% comment %} <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
+                <a href="">ABOUT</a>
+                </li> {% endcomment %}
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">HOME</a>
+                <a href="../skills">SKILLS </a>
               </li>
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">ABOUT</a>
+                <a href="../experience">EXPERIENCE</a>
               </li>
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">SKILLS</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">EXPERIENCE</a>
-              </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">EDUCATION</a>
+                <a href="../experience">EDUCATION</a>
               </li>
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
                 <a href="#">PORTFOLIO</a>
               </li>
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-                <a href="#">CONTACT</a>
+                <a href="../contact">CONTACT</a>
               </li>
               <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
                 <a href="#">BLOG</a>
               </li>
-              <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-4 text-sm grid-cols-5">
-                <a class="text"><i class="fa fa-whatsapp fa-lg"></i></a>
-
-                <a class="text" href="#"><i class="fa fa-envelope-o fa-lg hover:text-white" aria-hidden="true"></i></a>
-              </li>
-            </div>
-
-            <!-- ... -->
-          </ul>
+            </ul>
         </div>
-      </div>
-
-      <div class="col-span-5 relative flex">
-        <img src="http://themezaa.com/html/resume/default/images/profile.jpg" alt="Profile Image" class="profile-image" />
-        <div class="absolute bottom-64 left-16 h-64 w-64 text-5xl break-normal text-white border-b-2 border-neutral-100" style="font-family: 'Oswald, sans-serif;'">Hello, I'M AMOL YADAV</div>
-        <div class="absolute bottom-64 left-16 h-24 w-54 pt-8 text-2xl text-white border-t-2" style="font-family: 'Oswald, sans-serif;'">Full Stack Developer</div>
-      </div>
-
-      <div class="grid col-span-4 gap-0">
-        <div class="mb-0 mt-5">
-          <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">ABOUT</h1>
-          <div class="w-24 h-2 ml-2 mt-3 mb-8 bg-yellow-500"></div>
-
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Name: Amol Yadav</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-500 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Email : amol.d.4149@gmail.com</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Phone : 9130900878</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Date of birth : 18 December 2001</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Address : Pune, Maharashtra, India</a>
-          </li>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Nationality : India</a>
-          </li>
-          <h1 class="text-4xl mt-5 mb-0 font-bold border-b-indigo-500" style="font-family: 'Roboto, sans-serif;'">PROFFETIONAL PROFILE</h1>
-          <li class="grid justify-items-start list-none hover:text-amber-300 border-b-2 border-neutral-100 pb-3 pt-3 text-sm">
-            <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</a>
-          </li>
-        </div>
-      </div>
     </div>
-  </body>
+    
+<style>
+  @media (max-width: 768px) {
+      .hidden.md\\:hidden {
+          display: block !important;
+      }
+      .md\\:hidden {
+          display: none !important;
+      }
+  }
+  </style>
+  
+  <div class="md:hidden bg-black h-24 text-white col-span-10 md:col-span-2 md:flex md:flex-col md:justify-start md:items-center md:w-1/6 p-4 flex gap-4">
+    <img src="{{logo.url}}" width="50" height="50" alt="{{logo.url}}" />
+    <div class="flex-grow"></div>
+    <select id="cars" class="ml-auto bg-white border border-gray-300 text-gray-700 px-3 w-10 h-2 py-2 rounded-md shadow-sm focus:outline-none focus:ring focus:border-blue-300">
+      <option value="" disabled selected>Select an option</option>
+    <option value="../">HOME</option>
+    <option value="../skills">SKILLS</option>
+    <option value="../experience">EXPERIENCE</option>
+    <option value="../contact">EXPERIENCE</option>
+
+  </select>
+  <script>
+    const selectElement = document.getElementById('cars');
+    selectElement.addEventListener('change', function() {
+        const selectedValue = selectElement.value;
+        if (selectedValue) {
+            window.location.href = selectedValue;
+        }
+    });
+</script>
+
+
+  {% comment %} <ul class="md:flex md:flex-col md:space-y-4 mt-4">
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../">HOME</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="#">ABOUT</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../skills">SKILLS</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../experience">EXPERIENCE</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="#">PORTFOLIO</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="../contact">CONTACT</a>
+        </li>
+        <li class="list-none hover:text-amber-300 pb-3 pt-3 text-sm">
+            <a href="#">BLOG</a>
+        </li>
+    </ul>  {% endcomment %}
+  </div>
+
+    <div class="md:col-span-8 md:pl-8 md:pr-4 col-span-10">
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+
+</body>
 </html>
